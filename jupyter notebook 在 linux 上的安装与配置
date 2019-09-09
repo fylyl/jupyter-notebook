@@ -29,3 +29,4 @@ c.NotebookApp.port = 0000（可指定端口）
 可指定 ip 与端口
 jupyter notebook --port 1111 --ip=*.*.*.*  (ip 不写的话默认，可不写)
 
+done!!!
