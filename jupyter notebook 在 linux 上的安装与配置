@@ -1,0 +1,31 @@
+安装
+bash anaconda3安装包.sh 默认安装就可以
+
+配置 anaconda3 环境变量
+vim /root/.zshrc 或 vim /root/.bashrc
+export PATH=/root/anaconda3/bin:$PATH
+
+配置 jupyter notebook 并配置其环境变量
+第1：生成配置文件
+命令：jupyter notebook --generate-config
+在 /root/.jupyter/ 下生成文件 jupyter_notebook_config.py
+
+第2：创建密码
+命令：jupyter notebook password
+在 /root/.jupyter/ 下生成文件 jupyter_notebook_config.json
+
+第3：修改配置文件
+vim /root/.jupyter/jupyter_notebook_config.py
+删除被修改行最前的 # 符号
+主要修改内容如下：
+c.NotebookApp.ip = '*' 或 '0.0.0.0'
+c.NotebookApp.allow_remote_access = True
+c.NotebookApp.allow_root = True
+c.NotebookApp.open_browser = False（不在本地浏览器打开）
+c.NotebookApp.port = 0000（可指定端口）
+
+第4：启动 jupyter notebook后，可使用 https://ip:端口 对其进行访问
+可后台指定端口 nohup jupyter notebook --port 1111 &
+可指定 ip 与端口
+jupyter notebook --port 1111 --ip=*.*.*.*  (ip 不写的话默认，可不写)
+
