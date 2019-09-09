@@ -1,0 +1,15 @@
+第1：打开 anaconda powershell prompt
+    运行 jupyter notebook --generate-config，产生文件：C:\Users...\.jupyter\jupyter_notebook_config.py
+    修改该文件内容：c.NotebookApp.notebook_dir = 'D:\py'
+
+第2：打开 notebook 快捷方式
+    目标里的内容，把最后 % 里面的内容删除，只剩下“D:\...python.exe” “D:\...cwp.py” "D:\...anaconda3"
+    "D:\...jupyter-notebook-script.py"
+    起始位置：改为 D:\py
+
+第3：添加环境变量
+    D:\...\Anaconda3
+    D:\...\Anaconda3\Scripts
+    D:\...\Anaconda3\Library\bin
+
+done!!!
